@@ -1,4 +1,5 @@
 .DS_Store
+xray_detection_model.keras
 sample/images/00000013_005.png
 sample/images/00000013_026.png
 sample/images/00000017_001.png
