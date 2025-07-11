@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>X-Ray Detection Site</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+    <body>
+        <header>
+            <h1>X-Ray Detection Site</h1>
+        </header>
+        <main>
+            <section id="welcome">
+                <h2>Welcome to the X-Ray Detection Site</h2>
+                <p>This site allows you to upload X-ray images and receive automated findings.</p>
+            </section>
+            <section id="upload">
+                <h2>Upload an X-Ray Image</h2>
+                <form action="{{ url_for('home.upload') }}" method="post" enctype="multipart/form-data">
+                    <div class="file-drop-zone">
+                        <input type="file" name="file" accept="image/*" required>
+                        <p>Drag and drop your X-ray image here or click to select</p>
+                    </div>
+                    <button type="submit">Analyze X-Ray</button>
+                </form>
+            </section>
+        </main>
+        <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+    </body>
+</html>

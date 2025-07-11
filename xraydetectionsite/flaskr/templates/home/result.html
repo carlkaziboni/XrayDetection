@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X-Ray Detection Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>X-Ray Detection Results</h1>
+    </header>
+    <main>
+        <section id="results">
+            <h2>Analysis Results</h2>
+            <p>Findings: {{ findings }}</p>
+            <p>Image: <img src="{{ url_for('static', filename='uploads/' + filename) }}" alt="Image" height="300", width="300"></p>
+            <p>Overlayed Image: <img src="{{ url_for('static', filename='uploads/overlayed_' + filename) }}" alt="Overlayed Image" height="300" width="300"></p>
+        </section>
+        <section id="navigation">
+            <a href="{{ url_for('home.index') }}">Back to Home</a>
+        </section>
+    </main>
+    <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+</html>
